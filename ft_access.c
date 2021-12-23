@@ -37,7 +37,7 @@ char	*ft_access(char *cmd, char **arpath)
 
 	i = 0;
 	cm = ft_split(cmd, ' ');
-	cmd = cm[0];
+	cmd = ft_strdup(cm[0]);
 	if (ft_checkaccess(cmd, cm))
 		return (cmd);
 	ocmd = ft_strjoin("/", cmd);
